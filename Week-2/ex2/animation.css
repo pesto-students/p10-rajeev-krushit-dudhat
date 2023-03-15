@@ -3,3 +3,59 @@
   padding: 0;
 }
 
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.container {
+  height: 10rem;
+  background-color: aqua;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.box {
+  height: 5rem;
+  width: 5rem;
+  animation: move 4s
+}
+.red {
+  background-color: var(--color-red);
+}
+.green {
+  background-color: var(--color-green);
+}
+.blue {
+  background-color: var(--color-blue);
+}
+.yellow {
+  background-color: var(--color-yellow);
+}
+
+.box-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5rem;
+  width: 100%;
+}
+
+/* define variable for colores */
+:root {
+  --color-red: #ff0000;
+  --color-green: #00ff00;
+  --color-blue: #0000ff;
+  --color-yellow: #ffff00;
+}
+
+@keyframes move {
+  to {
+    transform: rotate(-180deg) translate(10rem);
+  }
+}
