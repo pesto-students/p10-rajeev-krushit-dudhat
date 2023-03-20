@@ -64,14 +64,14 @@ nav > ul {
 }
 .card-img {
   width: 100%;
-  height: auto;  
+  height: 100%;  
   border: 1px solid black;
 }
 
 .card-body {
   padding: 1rem;
   flex-grow: 1;
-  flex-shrink: 1;
+  flex-shrink: 1.2;
 }
 
 .form-container {
@@ -110,6 +110,10 @@ nav > ul {
 
 .form-control > button:hover {
   background-color: #76f4ff;
+}
+
+input {
+  margin: 0 0.5rem;
 }
 
 footer {
@@ -162,6 +166,9 @@ footer > div > p {
 }
 
 @media screen and (max-width: 1000px) {
+  nav > ul > li:nth-child(2) {
+    display: none;
+  }
   .container {
     width: 100%;
     margin: 0;
@@ -177,6 +184,11 @@ footer > div > p {
     width: 100%;
     height: auto;
   }
+  .form-container {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 1rem;
+  }
 }
 
 @media screen and (max-width: 758px) {
@@ -190,5 +202,13 @@ footer > div > p {
   .card-img {
     width: auto;
     height: 20rem;
+  }
+
+  .form-control.flex {
+    flex-direction: column;
+  }
+
+  footer > div {
+    margin: 0;
   }
 }
