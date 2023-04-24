@@ -7,7 +7,7 @@
 */
 
 function getNumber() {
-  return 10
+  return Math.floor(Math.random() * 100);
 }
 
 function customPromise(resolve = () => { }, reject = () => { }) {
