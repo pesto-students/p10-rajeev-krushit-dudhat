@@ -14,7 +14,11 @@ function Task ({task, setTasks}) {
   }
 
   const handleDeleteTask = (id) => {
+    console.log('delete id', id);
     setTasks((old) => {
+      console.log(old.filter((task) => {
+        return task.id !== id;
+      }));
       return old.filter((task) => {
         return task.id !== id;
       })

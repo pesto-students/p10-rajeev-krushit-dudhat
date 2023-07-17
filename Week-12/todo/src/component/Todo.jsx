@@ -60,7 +60,7 @@ function Todo () {
       <div className='m-2 p-2'>
         {tasks.map((task) => {
           if (task.done) {
-            return (<Task key={task.id} task={task} />)
+            return (<Task key={task.id} task={task} setTasks={setTasks} />)
           }
           return null;
         })}
