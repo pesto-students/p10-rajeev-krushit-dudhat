@@ -2,6 +2,7 @@ const express = require('express');
 const dotenv = require('dotenv');
 const cors = require('cors');
 const morgan = require('morgan');
+const cookieParser = require('cookie-parser');
 
 dotenv.config();
 require('./src/db/conn').connect();
@@ -15,6 +16,9 @@ const app = express();
 
 app.use(cors());
 
+app.use(cookieParser('secret', {
+  
+}))
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json({ limit: '50mb' }));
 app.use(morgan('dev'));

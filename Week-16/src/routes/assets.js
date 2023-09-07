@@ -6,6 +6,7 @@ const assetController = require('../controllers/v1/assets/assets');
 // import validator
 
 // import middleware if any
+const { authentication } = require('../middlewares/auth');
 
 router.post('/', assetController.createAsset);
 router.put('/:assetId', assetController.updateAsset);
