@@ -1,16 +1,8 @@
 const mongoose = require('mongoose');
 
-// mongoose user schema with following fields _id
-// name
-// email
-// Phone
-// age
-// Password
-
 const convertEmail = (email) => {
   return email.toLowerCase();
 }
-
 
 const Users = mongoose.Schema({
   name: { type: String, required: true },

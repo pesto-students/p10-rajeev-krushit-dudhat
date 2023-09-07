@@ -9,6 +9,7 @@ require('./src/db/conn').connect();
 // routes
 const authRouter = require('./src/routes/auth');
 const userRouter = require('./src/routes/users');
+const assetRouter = require('./src/routes/assets');
 
 const app = express();
 
@@ -19,7 +20,9 @@ app.use(express.json({ limit: '50mb' }));
 app.use(morgan('dev'));
 
 app.use('/api/v1', authRouter);
-app.use('/user', userRouter);
+app.use('/api/v1/user', userRouter);
+app.use('/api/v1/asset', assetRouter);
+
 
 app.use((req, res) => {
   console.log(req.body);
