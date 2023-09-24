@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.container {
+  height: 10rem;
+  background-color: aqua;
+}
+
+.text {
+  text-align: center;
+  position: absolute;
+  top: 4rem;
+  left: 50%;
+}
+
+.grid-container {
+  position: absolute;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  height: 10rem;
+  width: 10rem;
+  left: calc(50% - 3.5rem);
+}
+
+.box {
+  height: 5rem;
+  width: 5rem;
+}
+.red {
+  background-color: var(--color-red);
+  transform-origin: top left;
+  transition: rotate(0deg);
+  transition-duration: 2s;
+}
+.green {
+  background-color: var(--color-green);
+  transform-origin: top right;
+  transform: rotate(0deg);
+  transition-duration: 2s;
+}
+.blue {
+  background-color: var(--color-blue);
+  transform-origin: bottom left;
+  transition: rotate(0deg);
+  transition-duration: 2s;
+}
+.yellow {
+  background-color: var(--color-yellow);
+  transform-origin: bottom right;
+  transition: rotate(0deg);
+  transition-duration: 2s;
+}
+.grid-container:hover > .green, .grid-container:hover > .blue {
+    transform: rotate(-90deg);
+    transition-duration: 2s;
+}
+.grid-container:hover > .red, .grid-container:hover > .yellow {
+  transform: rotate(90deg);
+  transition-duration: 2s;
+}
+
+/* define variable for colores */
+:root {
+  --color-red: #ff0000;
+  --color-green: #00ff00;
+  --color-blue: #0000ff;
+  --color-yellow: #ffff00;
+}
+
+/* @keyframes move {
+  to {
+    transform: rotate(90deg);
+  }
+}
+
+@keyframes move-reverse {
+  to {
+    transform: rotate(-90deg);
+  }
+} */
